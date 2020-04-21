@@ -1,0 +1,355 @@
+{
+  "contractName": "MokaToken",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x18160ddd"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor",
+      "signature": "constructor"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50620f4240600081905550609e806100296000396000f3fe608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806318160ddd146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b6000548156fea165627a7a72305820ecf3a5baecfaf0c6c1ac226e723de7d32ec0a87348c71f31ad35f9ae1d75e3f60029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806318160ddd146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b6000548156fea165627a7a72305820ecf3a5baecfaf0c6c1ac226e723de7d32ec0a87348c71f31ad35f9ae1d75e3f60029",
+  "sourceMap": "46:363:1:-;;;254:152;8:9:-1;5:2;;;30:1;27;20:12;5:2;254:152:1;320:7;306:11;:21;;;;46:363;;;;;;",
+  "deployedSourceMap": "46:363:1:-;;;;;;;;;;;;;;;;;;;;;;;;153:26;;8:9:-1;5:2;;;30:1;27;20:12;5:2;153:26:1;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0; //Solidity Version\r\n\r\ncontract MokaToken{\r\n  //constructor\r\n  //set total number of tokens\r\n  //read total number of tokens\r\n\r\n  uint256 public totalSupply;       //This is a state variable.Accessible in the entire contract.\r\n\r\n  constructor() public{      //using constructor\r\n    totalSupply = 1000000;          // Total value set to 1000000 on init. This is ERC 20 standard.\r\n  }\r\n}\r\n",
+  "sourcePath": "C:/Users/Rushikesh/Desktop/mokacoin/contracts/MokaToken.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Rushikesh/Desktop/mokacoin/contracts/MokaToken.sol",
+    "exportedSymbols": {
+      "MokaToken": [
+        49
+      ]
+    },
+    "id": 50,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 49,
+        "linearizedBaseContracts": [
+          49
+        ],
+        "name": "MokaToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 40,
+            "name": "totalSupply",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "153:26:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 39,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "153:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 47,
+              "nodeType": "Block",
+              "src": "274:132:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 45,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 43,
+                      "name": "totalSupply",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 40,
+                      "src": "306:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31303030303030",
+                      "id": 44,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "320:7:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1000000_by_1",
+                        "typeString": "int_const 1000000"
+                      },
+                      "value": "1000000"
+                    },
+                    "src": "306:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 46,
+                  "nodeType": "ExpressionStatement",
+                  "src": "306:21:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 48,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 41,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "265:2:1"
+            },
+            "returnParameters": {
+              "id": 42,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "274:0:1"
+            },
+            "scope": 49,
+            "src": "254:152:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 50,
+        "src": "46:363:1"
+      }
+    ],
+    "src": "0:411:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Rushikesh/Desktop/mokacoin/contracts/MokaToken.sol",
+    "exportedSymbols": {
+      "MokaToken": [
+        49
+      ]
+    },
+    "id": 50,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 49,
+        "linearizedBaseContracts": [
+          49
+        ],
+        "name": "MokaToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 40,
+            "name": "totalSupply",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "153:26:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 39,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "153:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 47,
+              "nodeType": "Block",
+              "src": "274:132:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 45,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 43,
+                      "name": "totalSupply",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 40,
+                      "src": "306:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31303030303030",
+                      "id": 44,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "320:7:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1000000_by_1",
+                        "typeString": "int_const 1000000"
+                      },
+                      "value": "1000000"
+                    },
+                    "src": "306:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 46,
+                  "nodeType": "ExpressionStatement",
+                  "src": "306:21:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 48,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 41,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "265:2:1"
+            },
+            "returnParameters": {
+              "id": 42,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "274:0:1"
+            },
+            "scope": 49,
+            "src": "254:152:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 50,
+        "src": "46:363:1"
+      }
+    ],
+    "src": "0:411:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x008BBf087b531B94674384E9C4B646D091B9713E",
+      "transactionHash": "0xec9f398f056c380b3ff0eabaf22056c10607b9609f3237af1abe6c6623955c4f"
+    }
+  },
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2020-04-21T18:00:51.658Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
