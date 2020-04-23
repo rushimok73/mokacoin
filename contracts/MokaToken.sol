@@ -21,13 +21,23 @@ contract MokaToken{
     uint256 _value
   );
 
+  //Approval event
+  event Approval(
+    address indexed _owner,
+    address indexed _spender,
+    uint256 _value
+  );
+
   //Mapping to find out which address has how many tokens  address=>number_of_tokens
   mapping (address => uint256) public balanceOf;
+
+  //Mapping for allowance
+  mapping (address =>mapping(address => uint256)) public allowance;
 
   //using constructor
   constructor(uint256 _initialSupply) public{
     balanceOf[msg.sender] = _initialSupply;
-    // Total value set to 1000000 on init. This is ERC 20 standard.
+    // Total value set to 1000000 on init.
     totalSupply = _initialSupply;
   }
 
@@ -41,5 +51,33 @@ contract MokaToken{
       emit Transfer(msg.sender, _to, _value);
 
       return true;
+  }
+
+  //Approve
+  function approve(address _spender, uint256 _value) public returns(bool success){
+    //allowance
+    allowance[msg.sender][_spender] = _value;
+
+    //emit Event
+    emit Approval(msg.sender, _spender, _value);
+    //return success
+    return true;
+  }
+
+
+  function transferFrom(address _from, address _to, uint256 _value) public returns(bool success){
+    require(_value <= balanceOf[_from]);
+
+    require(_value <= allowance[_from][msg.sender]);
+
+    balanceOf[_from] -= _value;
+    balanceOf[_to] += _value;
+
+    allowance[_from][msg.sender] -= _value;
+
+    emit Transfer(_from, _to, _value);
+
+    return true;
+
   }
 }
