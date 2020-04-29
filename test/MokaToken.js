@@ -56,7 +56,6 @@ contract('MokaToken', function(accounts) {
     });
   });
 
-
   it('approve transactions of tokens', function(){
     return MokaToken.deployed().then(function(instance){
       tokenInstance = instance;

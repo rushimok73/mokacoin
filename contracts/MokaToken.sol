@@ -16,8 +16,8 @@ contract MokaToken{
 
   //Transfer Event
   event Transfer(
-    address indexed _from,
-    address indexed _to,
+    address _from,
+    address _to,
     uint256 _value
   );
 
