@@ -2,7 +2,7 @@ pragma solidity ^0.5.0;
 import "./MokaToken.sol";
 
 contract MokaTokenSale {
-  address admin;
+  address payable admin;
   MokaToken public tokenContract;
   uint256 public tokenPrice;
   uint256 public tokensSold;
@@ -31,5 +31,13 @@ contract MokaTokenSale {
       tokensSold += _numberOfTokens;
 
       emit Sell(msg.sender, _numberOfTokens);
+  }
+
+  function endSale() public {
+    require(msg.sender == admin);
+
+    require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));
+
+    admin.transfer(address(this).balance);
   }
 }
