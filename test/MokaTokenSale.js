@@ -8,7 +8,7 @@ contract('MokaTokenSale', function(accounts){
   var admin = accounts[0];
   var buyer = accounts[9];
   var tokensAvailable = 750000;
-  var tokenPrice = 10; //in WEI
+  var tokenPrice = 1000000; //in WEI
   var numberofTokens = 10;
 
   it('Initializes the contract with correct values', function(){
