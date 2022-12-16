@@ -2,7 +2,7 @@
 
 New cryptocurrency called mokacoin created by me, following the ERC20 token Standard.
 
-Created using Ganache and truffle. Used Express for my frontend.
+Created using Ganache and truffle. Used Express
 
 Can be deployed to the rinkeby test network using geth.
 
