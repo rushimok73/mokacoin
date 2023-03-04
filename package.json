@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "truffle": "^5.1.23",
+    "truffle": "^5.7.9",
     "web3": "^1.2.7"
   }
 }
